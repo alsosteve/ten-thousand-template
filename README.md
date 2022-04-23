@@ -1,7 +1,8 @@
 # Python 401d1818
-## Lab06: Ten Thousand 1
-### Author: 
+## Labs(06-09): Ten Thousand
+### Authors: 
 
+## Lab: 06
 ### Setup
 * Work in teams to build a command line version of the dice game Ten Thousand by expanding your understanding of Python standard library.
 
@@ -30,11 +31,11 @@ Today is all about tackling the highest risk and/or highest priority features - 
   * Add a `clear_shelf` instance method
     * `clear_shelf` should remove all unbanked points.
 
-#### Implementation Notes
+### Implementation Notes
   * Review [rules of game](https://en.wikipedia.org/wiki/Dice_10000)
   * Play [game online](http://www.playonlinedicegames.com/farkle)
 
-#### User Acceptance Tests:
+### User Acceptance Tests:
 - [Starter tests](https://github.com/codefellows/seattle-python-401d18/blob/main/class-06/demo/parametrized-tests/tests/test_game_logic.py) will be provided that cover cases listed below
   - All tests must pass as written (additional tests are allowed)
 
@@ -71,3 +72,60 @@ When rolling 1 to 6 dice ensure:
 ### Stretch:
 - Research `parametrized tests in PyTest`
 - Research `Behavior Driven Development`
+
+<!--- 
+## Lab: 07
+Extend Ten Thousand game started in previous class to get the game in playable state.
+
+### Feature Tasks and Requirements
+* Application should implement all features from previous version
+* Application should simulate rolling between 1 and 6 dice
+* Application should allow user to set aside dice each roll
+* Application should allow “banking” current score or rolling again.
+* Application should keep track of total score
+* Application should keep track of current round
+* Application should have automated tests to ensure proper operation
+
+### User Acceptance Tests
+* Starter code contains acceptance tests in the form of “simulation” files.
+  * E.g. tests/version_1/quitter.sim.txt
+* These simulation files are used in concert with tests/flo.py to examine actual vs. expected output.
+* Tests for today are provided.
+  * **NOTE**: Feel free to add tests, but you are required to pass all existing tests.
+* The tests are the official documentation of the features for the day.
+
+## Lab: 08
+Shore up the core functionality of game by allowing users to set aside scoring dice and continuing their turn.
+Then handle cheaters and/or confused players who are skirting the rules.
+
+### Feature Tasks and Requirements
+* Application should implement features from versions 1 and 2
+* Should handle setting aside scoring dice and continuing turn with remaining dice.
+* Should handle when cheating occurs.
+  * Or just typos.
+  * E.g. roll = [1,3,5,2] and user selects 1, 1, 1, 1, 1, 1
+* Should allow user to continue rolling with 6 new dice when all dice have scored in current turn.
+* Handle zilch
+  * No points for round, and round is over
+
+### Stretch Goals
+* Identify features to add and propose idea to client.
+* Identify gaps in current test suite and add tests to expose bugs.
+
+## Lab: 09
+Add an AI bot to play the game.
+
+### Feature Tasks and Requirements
+* Create an AI Bot to play Ten Thousand
+  * The only method available for use from Game class is `play`.
+  * All static methods of `GameLogic` class are available.
+  * All other interactions with game can take place **ONLY** via the I/O features of the game.
+    * In other words, via injectable `print` and `input` functionality.
+    * It is FORBIDDEN to inject a custom `roller` function into Game class.
+* Copy bots.py to your project.
+  * Place it at root of project, at same level as `pyproject.toml`
+* Your Bot class should be added to `bots.py` file with name of your choosing replacing `YourBot`.
+  * **NOTE** the code for `BaseBot` class is supplied for reference, but your custom code will be in the overridden `_roll_bank_or_quit` and `_enter_dice` methods.
+* User should be able to see your bot play by executing `bots.py` from terminal.
+* Application should implement features from previous classes
+--->
